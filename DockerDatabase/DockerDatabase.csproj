@@ -31,9 +31,13 @@
 
   <ItemGroup>
     <PackageReference Include="Docker.DotNet" Version="3.125.0" />
-    <PackageReference Include="GitVersionTask" Version="4.0.0-beta0012" />
+    <PackageReference Include="GitVersionTask" Version="4.0.0-beta0012">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Npgsql" Version="3.2.6" />
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta004" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta004">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="System.Data.Common" Version="4.3.0" />
   </ItemGroup>
 
