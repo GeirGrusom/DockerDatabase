@@ -2,6 +2,43 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <Authors>Henning Moe</Authors>
+    <Company />
+    <Description>Simplifies database integration testing by allowing docker container support</Description>
+    <Copyright>© 2017 Henning Moe</Copyright>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git@github.com:GeirGrusom/DockerDatabase.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/GeirGrusom/DockerDatabase</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/GeirGrusom/DockerDatabase/master/LICENSE</PackageLicenseUrl>
+    <PackageTags>docker postgresql testing</PackageTags>
+    <PackageReleaseNotes>* Added PostgreSQL support</PackageReleaseNotes>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard2.0\DockerDatabase.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\DockerDatabase.xml</DocumentationFile>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Docker.DotNet" Version="3.125.0" />
+    <PackageReference Include="GitVersionTask" Version="4.0.0-beta0012">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Npgsql" Version="3.2.6" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta004">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Data.Common" Version="4.3.0" />
+  </ItemGroup>
 
 </Project>

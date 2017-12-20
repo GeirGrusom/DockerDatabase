@@ -1,0 +1,17 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
+  "settings": {
+    "documentationRules": {
+      "copyrightText": "Original filename: {fileName}\nAuthor: Henning Moe\nThis file is licensed under {licenseName}.\nThe full license is available under the root in a file names {licenseFile}.",
+      "xmlHeader": false,
+      "headerDecoration": "-----------------------------------------------------",
+      "variables": {
+        "licenseName": "MIT",
+        "licenseFile": "LICENSE"
+      }      
+    },
+    "namingRules": {
+      "allowCommonHungarianPrefixes": false 
+    }
+  }  
+}
