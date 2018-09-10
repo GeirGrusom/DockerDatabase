@@ -12,7 +12,7 @@ namespace DockerDatabase
     /// <summary>
     /// This class is a wrapper for a stoppable docker container
     /// </summary>
-    internal class DockerContainer
+    internal sealed class DockerContainer
     {
         private readonly DockerClient client;
 

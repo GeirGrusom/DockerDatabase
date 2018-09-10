@@ -49,9 +49,9 @@ namespace DockerDatabase.Tests
             return new ConstraintResult(this, actual, true);
         }
 
-        private class NullProgress : IProgress<JSONMessage>
+        private class NullProgress : IProgress<ContainerStatsResponse>
         {
-            public void Report(JSONMessage value)
+            public void Report(ContainerStatsResponse value)
             {
             }
         }

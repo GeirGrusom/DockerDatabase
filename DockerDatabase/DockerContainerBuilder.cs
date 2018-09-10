@@ -15,7 +15,7 @@ namespace DockerDatabase
     /// <summary>
     /// This class is used to build a DockerContainer for database engines
     /// </summary>
-    internal class DockerContainerBuilder
+    internal sealed class DockerContainerBuilder
     {
         private readonly string baseImage;
         private readonly string tag;
@@ -86,7 +86,7 @@ namespace DockerDatabase
             return new DockerContainer(containerCreated.ID, this.client);
         }
 
-        private class Progress : IProgress<JSONMessage>
+        private sealed class Progress : IProgress<JSONMessage>
         {
             public void Report(JSONMessage value)
             {
